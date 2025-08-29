@@ -107,8 +107,54 @@ export default function App() {
                 onChange={(e) => setDiskon(e.target.value)}
                 placeholder="e.g. 10"
               />
-            </div>
+            </div>        
           </div>
+
+{/* 📌 Tabel Biaya Marketplace */}
+          <div className="mt-6 bg-white rounded-2xl shadow-lg overflow-hidden">
+            <table className="w-full text-sm text-left border-collapse">
+              <thead className="bg-gray-100 text-gray-700">
+                <tr>
+                  <th className="px-4 py-3">Marketplace</th>
+                  <th className="px-4 py-3">Biaya Admin</th>
+                  <th className="px-4 py-3">Biaya Layanan</th>
+                  <th className="px-4 py-3">Biaya Proses</th>
+                  <th className="px-4 py-3">Rumus Harga Minimal Aman</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                <tr className="hover:bg-orange-50">
+                  <td className="px-4 py-3 font-semibold text-orange-600">Shopee</td>
+                  <td className="px-4 py-3">8%</td>
+                  <td className="px-4 py-3">6%</td>
+                  <td className="px-4 py-3">Rp 1.250</td>
+                  <td className="px-4 py-3">Modal + 8% + 6% + 1.250</td>
+                </tr>
+                <tr className="hover:bg-purple-50">
+                  <td className="px-4 py-3 font-semibold text-purple-600">TikTok</td>
+                  <td className="px-4 py-3">1%</td>
+                  <td className="px-4 py-3">-</td>
+                  <td className="px-4 py-3">Rp 1.000</td>
+                  <td className="px-4 py-3">Modal + 1% + 1.000</td>
+                </tr>
+                <tr className="hover:bg-blue-50">
+                  <td className="px-4 py-3 font-semibold text-blue-600">Blibli</td>
+                  <td className="px-4 py-3">10.5%</td>
+                  <td className="px-4 py-3">-</td>
+                  <td className="px-4 py-3">-</td>
+                  <td className="px-4 py-3">Modal + 10.5%</td>
+                </tr>
+                <tr className="hover:bg-red-50">
+                  <td className="px-4 py-3 font-semibold text-red-600">Lazada</td>
+                  <td className="px-4 py-3">6.2%</td>
+                  <td className="px-4 py-3">1.8%</td>
+                  <td className="px-4 py-3">-</td>
+                  <td className="px-4 py-3">Modal + 6.2% + 1.8%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
         </div>
 
         {/* Output */}
@@ -157,6 +203,8 @@ export default function App() {
               profit={result.profitLazada}
             />
           </div>
+
+          
         </div>
       </div>
 
